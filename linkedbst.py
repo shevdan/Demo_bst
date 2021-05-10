@@ -444,18 +444,18 @@ class LinkedBST(AbstractCollection):
             bst.clear()
             return program_time
 
-        words = parse_words(path)[:20000]
+        words = parse_words(path)[:10000]
         print(f'Program takes {round(check_lst_sorted(words), 3)} seconds to find 10000 occurences of random \
-words in a sorted list of 20k words')
+words in a sorted list of 10k words')
 
         print(f'Program takes {round(check_bst_sorted(words), 3)} seconds to find 10000 occurences of random \
-words in a bst constructed on a sorted list of 20k words')
+words in a bst constructed on a sorted list of 10k words')
 
         print(f'Program takes {round(check_bst_random(words), 3)} seconds to find 10000 occurences of random \
-words in a bst constructed on a random list of 20k words')
+words in a bst constructed on a random list of 10k words')
 
         print(f'Program takes {round(check_bst_balanced(words), 3)} seconds to find 10000 occurences of random \
-words in a balanced bst constructed on a random list of 20k words')
+words in a balanced bst constructed on a random list of 10k words')
 
 
 
