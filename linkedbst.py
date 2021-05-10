@@ -406,7 +406,6 @@ class LinkedBST(AbstractCollection):
             bst = LinkedBST()
             for word in words:
                 bst.add(word)
-            print('FINALLY')
 
             now = time()
             for _ in range(10000):
@@ -445,47 +444,23 @@ class LinkedBST(AbstractCollection):
             bst.clear()
             return program_time
 
-        print(len(parse_words(path)))
-        words = parse_words(path)[:10000]
+        words = parse_words(path)[:20000]
         print(f'Program takes {round(check_lst_sorted(words), 3)} seconds to find 10000 occurences of random \
-words in a sorted list')
+words in a sorted list of 20k words')
 
         print(f'Program takes {round(check_bst_sorted(words), 3)} seconds to find 10000 occurences of random \
-words in a bst constructed on a sorted list of words')
+words in a bst constructed on a sorted list of 20k words')
 
         print(f'Program takes {round(check_bst_random(words), 3)} seconds to find 10000 occurences of random \
-words in a bst constructed on a random list of words')
+words in a bst constructed on a random list of 20k words')
 
         print(f'Program takes {round(check_bst_balanced(words), 3)} seconds to find 10000 occurences of random \
-words in a balanced bst constructed on a random list of words')
-
-
-
-
-
-
-
-
+words in a balanced bst constructed on a random list of 20k words')
 
 
 
 if __name__ == '__main__':
     
     a = LinkedBST()
-    a.add('50')
-    a.add('f')
-    a.add('k')
-    a.add('40')
-    a.add("70")
-    # a.add(60)
-    # a.add(80)
-    # print(a)
-    # print(a.height())
-    # print(a.isEmpty())
-    # print(a.rangeFind(5, 20))
-    # print(a.rebalance())
-    # print(len(a))
-    # print(a)
-    # print(a.is_balanced())
-    # #print(a.successor(65))
-    a.demo_bst('/Users/shevdan/Documents/Programming/Python/semester2/lab13/binary_search_tree/words.txt')
+    path = '/Users/shevdan/Documents/Programming/Python/semester2/lab13/binary_search_tree/words.txt'
+    a.demo_bst(path)
